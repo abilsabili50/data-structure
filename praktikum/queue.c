@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <stdbool.h>
 
 #define MAX_SIZE 100
@@ -79,7 +78,7 @@ void display(struct Queue *queue)
 {
   if (isEmpty(queue))
   {
-    print("Queue kosong, tidak ada elemen untuk ditampilkan.\n");
+    printf("Queue kosong, tidak ada elemen untuk ditampilkan.\n");
   }
   else
   {
