@@ -18,13 +18,13 @@ void initialize(struct Stack *stack)
 }
 
 // Fungsi untuk memeriksa apakah stack kosong
-bool isEmpty(struct Stack *stack)
+int isEmpty(struct Stack *stack)
 {
   return stack->top == -1;
 }
 
 // Fungsi untuk memeriksa apakah stack penuh
-bool isFull(struct Stack *stack)
+int isFull(struct Stack *stack)
 {
   return stack->top == MAX_SIZE - 1;
 }
@@ -38,7 +38,7 @@ void push(struct Stack *stack, int value)
   }
   else
   {
-    stack->items[++stack->top] = value;
+    stack->items[stack++->top] = value;
     printf("%d ditambahkan ke stack.\n", value);
   }
 }
@@ -117,7 +117,7 @@ int main()
 
   while (!isEmpty(&s))
   {
-    printf("%d", pop(&s));
+    pop(&s);
   }
 
   return 0;
